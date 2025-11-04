@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0; 
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+:root {
+
+  color-scheme: light dark;
+
+  --light-primary-color: #202020;
+  --light-secondary-color: grey;
+  --light-text-color: black;
+
+  --dark-primary-color: black;
+  --dark-secondary-color: #4a4e69;
+  --text-color: white; 
+}
+
+body {
+  background-color: var(--dark-primary-color);
+  overflow: hidden;
+}
+
+#title {
+  font-weight: 700;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+/* had to do this cause first image is bigger no matter if its same pixel width*/ 
+.buttons img:nth-child(1) {
+  width: 25px;
+}
+
+.buttons img:nth-child(2) {
+  width: 40px;
+}
+
+.buttons img:hover {
+  color: #FFFAFA;
+}
+
+.buttons img:hover {
+  cursor: pointer;
+  filter: invert(14%) sepia(10%) saturate(10%) hue-rotate(326deg) brightness(86%) contrast(98%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.timer-text {
+  font-size: 100px;
+  margin-top: -150px;
+  padding: 100px;
+}
+
+.light-mode {
+  transition-property: background-color;
+  transition-timing-function: ease-out;
+  transition-duration: 250ms;
+  background-color: var(--light-primary-color);
+  color: var(--text-color);
+}
+
+.dark-mode {
+  transition-delay: 150ms;
+  transition-property: background-color;
+  transition-timing-function: ease-out;
+  transition-duration: 250ms;
+  background-color: var(--dark-primary-color);
+  color: var(--text-color);
+}
